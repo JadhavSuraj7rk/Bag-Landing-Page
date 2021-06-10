@@ -5,6 +5,7 @@
   --text-white-color: #ffffff;
   --text-news-para-color: #a1a1a1;
   --text-collection-color: #a49393;
+  --bottom-event-black-color: #000000;
 }
 
 * {
@@ -17,7 +18,7 @@ body {
   font-family: "Raleway", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
- overflow: hidden;
+  overflow: hidden;
 
   min-height: 100vh;
 }
@@ -25,15 +26,27 @@ body {
 .main__landing__page {
   width: 100vw;
   height: 100vh;
-  padding: 0 1.5rem;
-  background: rgb(36, 36, 38);
+  /* padding: 0 1.5rem; */
+  /* background: rgb(36, 36, 38);
   background: linear-gradient(
     120deg,
     rgba(36, 36, 38, 1) 0%,
     rgba(58, 58, 74, 1) 14%,
     rgba(79, 79, 94, 1) 74%,
     rgba(22, 22, 24, 1) 100%
-  );
+  ); */
+  background-image: url("../img/hero_img.png"),
+    linear-gradient(
+      120deg,
+      rgba(27, 27, 29, 1) 0%,
+      rgba(80, 80, 84, 1) 21%,
+      rgba(72, 72, 76, 1) 46%,
+      rgba(70, 70, 73, 1) 72%,
+      rgba(22, 22, 24, 1) 100%
+    );
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
 }
 
 /*================
@@ -42,6 +55,7 @@ body {
 .header {
   width: 100%;
   height: 3rem;
+  /* padding-top: 1rem; */
   /* outline: 2px solid red; */
   color: var(--text-white-color);
   display: flex;
@@ -55,8 +69,29 @@ body {
   font-size: 2rem;
   font-weight: 700;
   flex-basis: 60%;
+  margin-left: 0.9rem;
+
+
   /* outline: 1px solid pink; */
 }
+
+
+.lp-brand a {
+  text-decoration: none;
+  color: var(--text-white-color);
+  animation: color-change 1s infinite;
+  transition: all 1s ease;
+}
+
+@keyframes color-change {
+  0% {
+   color: var(--text-white-color);
+  }
+  100% {
+   color: var(--yellow-color);
+  }
+}
+
 
 .navbar {
   flex-basis: 40%;
@@ -65,11 +100,52 @@ body {
   justify-content: space-evenly;
 }
 
-.navbar > a {
+.navbar .nav__link {
   text-decoration: none;
   color: var(--text-white-color);
   font-weight: 600;
+  transition: all 0.5s ease;
+  position: relative;
 }
+
+.nav__link:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  top: 30px;
+  left: 0;
+  background-color: var(--yellow-color);
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out;
+}
+
+.nav__link:hover:before {
+  visibility: visible;
+  transform: scaleX(1);
+}
+
+/* .nav__link:hover{
+  color: var(--yellow-color);
+}  */
+
+.navbar-link-active {
+  color: var(--yellow-color) !important;
+}
+
+.navbar-link-active:before{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--yellow-color);
+  visibility: visible;
+  transform: scaleX(1);
+}
+
 
 /*==================
               main content part 
@@ -77,14 +153,14 @@ body {
 /*--- Grid container ---*/
 .main__content {
   height: calc(100vh - 3.1rem);
-  outline: 2px solid palevioletred;
+  /* outline: 2px solid palevioletred; */
   display: grid;
   grid: repeat(12, 1fr) / repeat(16, 1fr);
 }
 
 .main__content__item {
   color: var(--text-white-color);
-  outline: 1px solid bisque;
+  /* outline: 1px solid bisque; */
   /* display: grid;
   place-items: center; */
 }
@@ -141,7 +217,12 @@ body {
 .bottom-event-news-grid-item {
   box-sizing: border-box;
   padding: 0 2.5rem;
+  /* background-color: rgba(22, 22, 24, .3); */
+  background: rgba(0, 0, 0, 0.5);
+
+  /*it adds filters (like changing the hue, contrast or blur) of the background of an element without changing the text or other elements inside.*/
   /* padding-top: 0.7rem; */
+  backdrop-filter: blur(3px) brightness(1.4);
   grid-area: 10 / 2 / 13 / 17;
   display: flex;
   align-items: center;
@@ -150,8 +231,6 @@ body {
   overflow: hidden;
   /* align-items: center; */
 }
-
-
 
 .bottom-event-news-grid-item h4 {
   font-size: 0.9rem;
@@ -179,7 +258,7 @@ body {
 
 .event_with_title {
   flex-basis: 20%;
-  outline: 1px solid royalblue;
+  /* outline: 1px solid royalblue; */
 }
 
 .three-dots {
@@ -202,13 +281,12 @@ body {
 
 .event_without_title {
   flex-basis: 20%;
-  outline: 1px solid royalblue;
-
+  /* outline: 1px solid royalblue; */
 }
 
-.Event-model-image{
+.Event-model-image {
   height: 100%;
-  outline: 1px solid greenyellow;
+  /* outline: 1px solid greenyellow; */
 }
 
 .News p {
@@ -223,6 +301,33 @@ body {
 }
 
 .social-media-grid-item {
-  grid-area: 9 / 1 / 12 / 2;
+  grid-area: 9 / 1 / 13 / 2;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-news-para-color);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  /* border-right: 1px solid gray; */
+
   /* border-right: 1px solid red; */
+}
+
+.social-media-grid-item a {
+  text-decoration: none;
+  color: var(--text-white-color);
+}
+
+.facbook,
+.instagram,
+.twitter {
+  transform: rotate(270deg);
+}
+
+.siderbar-outline {
+  grid-area: 1/ 1 / 9 / 2;
+  border-right: 1px solid #aba2a2;
+  opacity: 0.3;
 }
