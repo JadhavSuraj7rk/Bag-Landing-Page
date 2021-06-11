@@ -346,6 +346,10 @@ body {
     padding: 1rem;
     -webkit-tap-highlight-color: transparent;
   }
+
+  .nav__link:before {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 769px) {
