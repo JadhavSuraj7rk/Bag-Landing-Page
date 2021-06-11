@@ -11,14 +11,44 @@
     <section class="main__landing__page">
       <!--=== header part start here ===-->
       <header class="header">
-        <div class="lp-brand"><a href="#">Aer</a></div>
-        <nav class="navbar">
-          <a href="#" class="nav__link navbar-link-active">Home</a>
+        <!-- <div class="lp-brand"><a href="#">Aer</a></div>
+
+        <ion-icon
+          name="menu-outline"
+          class="header__toggle"
+          id="nav-toggle"
+        ></ion-icon> -->
+
+        <!-- <nav class="navbar" id="nav-menu"> -->
+        <!-- <ion-icon
+          name="close-outline"
+          class="nav__close"
+          id="nav-close"
+        ></ion-icon> -->
+        <!-- <a href="#" class="nav__link navbar-link-active">Home</a>
           <a href="#" class="nav__link">Product</a>
           <a href="#" class="nav__link">About</a>
           <a href="#" class="nav__link">Location</a>
           <a href="#" class="nav__link">Cart</a>
-          <a href="#" class="nav__link"><ion-icon name="search-outline"></ion-icon></a>
+          <a href="#" class="nav__link"
+            ><ion-icon name="search-outline"></ion-icon
+          ></a>
+        </nav> -->
+
+        <nav class="navbar">
+          <ul class="navbar-unorder-list">
+            <li class="lp-brand"><a href="#" class="nav__link">Aer</a></li>
+            <li class="nav-list"><a href="#" class="nav__link">Home</a></li>
+            <li class="nav-list"><a href="#" class="nav__link">Product</a></li>
+            <li class="nav-list"><a href="#" class="nav__link">About</a></li>
+            <li class="nav-list"><a href="#" class="nav__link">Location</a></li>
+            <li class="nav-list"><a href="#" class="nav__link">Cart</a></li>
+            <li class="nav-list">
+              <a href="#" class="nav__link"
+                ><ion-icon name="search-outline"></ion-icon
+              ></a>
+            </li>
+          </ul>
         </nav>
       </header>
       <!--=== header part end here ===-->
@@ -40,7 +70,7 @@
 
         <!-- hero heading text -->
         <div class="main__content__item hero-heading-grid-item">
-          Work <br />Anywhere
+          Work <span>Anywhere</span>
         </div>
 
         <!-- hero paragraph text -->

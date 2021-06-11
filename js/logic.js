@@ -2,18 +2,17 @@
 //   toggleMenu = document.getElementById("nav-toggle"),
 //   closeMenu = document.getElementById("nav-close");
 
-
-// // show navbar(mobile)  
+// // show navbar(mobile)
 // toggleMenu.addEventListener("click", () => {
 //   navMenu.classList.toggle("navbar-show-menu");
 // });
 
-// // close navbar(mobile)  
+// // close navbar(mobile)
 // closeMenu.addEventListener("click", () => {
 //   navMenu.classList.remove("navbar-show-menu");
 // });
 
-// navbar links active 
+// navbar links active
 const navLink = document.querySelectorAll(".nav__link");
 function linkAction() {
   navLink.forEach((n) => n.classList.remove("navbar-link-active"));
