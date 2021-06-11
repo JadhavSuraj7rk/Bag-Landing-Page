@@ -5,53 +5,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <title>Landing Page | HTML and CSS</title>
   </head>
   <body>
     <section class="main__landing__page">
       <!--=== header part start here ===-->
       <header class="header">
-        <!-- <div class="lp-brand"><a href="#">Aer</a></div>
-
-        <ion-icon
-          name="menu-outline"
-          class="header__toggle"
-          id="nav-toggle"
-        ></ion-icon> -->
-
-        <!-- <nav class="navbar" id="nav-menu"> -->
-        <!-- <ion-icon
-          name="close-outline"
-          class="nav__close"
-          id="nav-close"
-        ></ion-icon> -->
-        <!-- <a href="#" class="nav__link navbar-link-active">Home</a>
-          <a href="#" class="nav__link">Product</a>
-          <a href="#" class="nav__link">About</a>
-          <a href="#" class="nav__link">Location</a>
-          <a href="#" class="nav__link">Cart</a>
-          <a href="#" class="nav__link"
-            ><ion-icon name="search-outline"></ion-icon
-          ></a>
-        </nav> -->
-
         <nav class="navbar">
           <ul class="navbar-unorder-list">
-            <li class="lp-brand"><a href="#" class="nav__link">Aer</a></li>
-            <li class="nav-list"><a href="#" class="nav__link">Home</a></li>
+            <li class="lp-brand"><a href="#">Aer</a></li>
+            <li class="nav-list"><a href="#" class="nav__link navbar-link-active">Home</a></li>
             <li class="nav-list"><a href="#" class="nav__link">Product</a></li>
             <li class="nav-list"><a href="#" class="nav__link">About</a></li>
             <li class="nav-list"><a href="#" class="nav__link">Location</a></li>
             <li class="nav-list"><a href="#" class="nav__link">Cart</a></li>
             <li class="nav-list">
-              <a href="#" class="nav__link"
-                ><ion-icon name="search-outline"></ion-icon
-              ></a>
+              <a href="#" class="nav__link"><i class="fa fa-search"></i></a>
+            </li>
+
+            <li class="ham-btn">
+              <a href="#"><i class="fa fa-align-left header__toggle"></i></a>
             </li>
           </ul>
         </nav>
       </header>
-      <!--=== header part end here ===-->
 
       <!--=== main part start here ===-->
       <main class="main__content">
@@ -123,12 +104,7 @@
       <!--=== main part end here ===-->
     </section>
 
-    <!--=== ionicons ===-->
-    <script
-      async
-      type="module"
-      src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.esm.js"
-    ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     <!--=== Main js ===-->
     <script src="./js/logic.js"></script>
