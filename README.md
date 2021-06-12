@@ -10,6 +10,11 @@
 ## Adobe Xd Design ![Abobe xd](https://img.shields.io/badge/Adobe%20XD-FF61F6?style=plastic&logo=Adobe%20XD&logoColor=white)
 ![Example screenshot](https://i.ibb.co/xYcShSJ/Desktop.png)
 
+
+
+## Mockup
+![mockup](https://i.ibb.co/3pxY6KT/landing-page-mockup.png)
+
 ## Technologies Used
 > ![html](https://img.shields.io/badge/HTML5-E34F26?style=plastic&logo=html5&logoColor=white) ![css](https://img.shields.io/badge/CSS3-1572B6?style=plastic&logo=css3&logoColor=white) ![javascript](https://img.shields.io/badge/JavaScript-323330?style=plastic&logo=javascript&logoColor=F7DF1E)
 
