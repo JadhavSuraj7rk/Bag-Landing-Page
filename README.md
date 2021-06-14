@@ -1,4 +1,4 @@
-# Bag Landing page ![Sample screenshot](https://i.ibb.co/2vLW41v/output-onlinepngtools.png)
+# Bag Landing page ![Landing page](https://img.shields.io/badge/Landing-Page-%23FFC0CB)
 
 > Used Adobe XD, CSS Grid, AND CSS Flexbox to build a landing page.
 > Live demo [_here_](https://landing-page-using-css-grid.netlify.app). 
